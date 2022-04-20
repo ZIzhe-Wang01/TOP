@@ -1,0 +1,36 @@
+server:
+  port: 8090
+
+#Mybatis-plus配置
+mybatis-plus:
+  #配置Mapper映射文件
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #配置Mybatis数据返回类型别名
+  type-aliases-package: com.top.pojo
+  configuration:
+    #自动驼峰命名
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: auto
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///top
+    username: root
+    password: 123456
+  thymeleaf:
+    #不启用缓存
+    cache: false
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/,classpath:/templates/admin/*
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
