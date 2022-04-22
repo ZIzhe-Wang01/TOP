@@ -1,6 +1,10 @@
 server:
   port: 8090
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0f95bad5e82b48112f84d31c3fbcae296fc8039
 #Mybatis-plus配置
 mybatis-plus:
   #配置Mapper映射文件
@@ -9,6 +13,18 @@ mybatis-plus:
   type-aliases-package: com.top.pojo
   configuration:
     #自动驼峰命名
+<<<<<<< HEAD
+=======
+#Mybatis-plus
+mybatis-plus:
+  #Mapper file
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  
+  type-aliases-package: com.top.pojo
+  configuration:
+>>>>>>> 7c4da5c (new update)
+=======
+>>>>>>> a0f95bad5e82b48112f84d31c3fbcae296fc8039
     map-underscore-to-camel-case: false
   global-config:
     db-config:
@@ -21,7 +37,14 @@ spring:
     username: root
     password: 123456
   thymeleaf:
+<<<<<<< HEAD
+<<<<<<< HEAD
     #不启用缓存
+=======
+>>>>>>> 7c4da5c (new update)
+=======
+    #不启用缓存
+>>>>>>> a0f95bad5e82b48112f84d31c3fbcae296fc8039
     cache: false
   mvc:
     view:

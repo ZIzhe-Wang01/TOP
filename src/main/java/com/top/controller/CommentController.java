@@ -1,7 +1,13 @@
 package com.top.controller;
 
 
+
 import com.top.pojo.Comment;
+
+import com.top.dao.entity.Comment;
+
+import com.top.pojo.Comment;
+
 import com.top.service.CommentService;
 
 import org.springframework.beans.factory.annotation.Autowired;

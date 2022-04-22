@@ -2,6 +2,7 @@ package com.top.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+
 import com.top.pojo.Follow;
 import com.top.pojo.Post;
 import com.top.pojo.User;
@@ -10,6 +11,15 @@ import com.top.service.PostService;
 import com.top.service.UserService;
 import com.top.utlis.MessageUtils;
 import com.top.utlis.RespBean;
+
+import com.top.dao.entity.Follow;
+import com.top.dao.entity.Post;
+import com.top.dao.entity.User;
+import com.top.service.FollowService;
+import com.top.service.PostService;
+import com.top.service.UserService;
+import com.top.utils.MessageUtils;
+import com.top.utils.RespBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -143,7 +153,13 @@ public class UserController {
 		InputStream in = img.getInputStream();
 		filename += ".jpg";
 		userService.updImg(id, filename);
+
 		FileOutputStream fos = new FileOutputStream(propertyPath + "\\target\\classes\\templates\\res\\images\\avatar\\" + filename);
+
+		FileOutputStream fos = new FileOutputStream(propertyPath + "/target/classes/templates/res/images/avatar/" + filename);
+
+		FileOutputStream fos = new FileOutputStream(propertyPath + "\\target\\classes\\templates\\res\\images\\avatar\\" + filename);
+
 		byte bf[] = new byte[1024];
 		int l = 0;
 		while ((l = in.read(bf)) != -1) {
@@ -151,12 +167,19 @@ public class UserController {
 		}
 		in.close();
 		fos.close();
+
 		img.transferTo(new File(propertyPath + "\\src\\main\\resources\\templates\\res\\images\\avatar\\" + filename));
+
+		img.transferTo(new File(propertyPath + "/src/main/resources/templates/res/images/avatar/" + filename));
+
+		img.transferTo(new File(propertyPath + "\\src\\main\\resources\\templates\\res\\images\\avatar\\" + filename));
+
 		User user = userService.getById(id);
 		request.getSession().setAttribute("user", user);
 		return "redirect:/user/detail/" + id;
 	}
 	
+
 	@RequestMapping("addFollow/{userId}/{followId}")
 	public String addFollow(@PathVariable Integer userId, @PathVariable Integer followId, HttpServletRequest request) {
 		followService.addFollow(userId, followId);
@@ -211,4 +234,5 @@ public class UserController {
 		one.setList(followService.list(new QueryWrapper<Follow>().eq("user_id", userId)));
 		return "redirect:/user/findListByNickName";
 	}
+
 }

@@ -2,9 +2,19 @@ package com.top.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+
 import com.top.pojo.Comment;
 import com.top.pojo.Post;
 import com.top.pojo.User;
+
+import com.top.dao.entity.Comment;
+import com.top.dao.entity.Post;
+import com.top.dao.entity.User;
+
+import com.top.pojo.Comment;
+import com.top.pojo.Post;
+import com.top.pojo.User;
+
 import com.top.service.CommentService;
 import com.top.service.PostService;
 import com.top.service.UserService;
