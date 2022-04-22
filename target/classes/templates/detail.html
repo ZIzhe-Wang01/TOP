@@ -32,7 +32,11 @@
                 <h1 th:text="${post.title}"></h1>
                 <div class="detail-about">
                     <a class="jie-user" th:href="'/user/detail/'+${post.user.id}"> 
+
                         <!-- <img th:src="'/res/images/avatar/'+${post.user.img}" alt="avatar"> <cite>  -->
+
+                        <!-- <img th:src="'/res/images/avatar/'+${post.user.img}" alt="avatar"> <cite>  -->
+
                             <span th:text="${post.user.nickname}"></span>
                         <em th:text="${post.time}"></em> </cite> 
                     </a>
@@ -40,7 +44,11 @@
                     </div>
                 </div>
                 <div class="detail-body photos card p-3" style="margin-bottom: 20px;">
+
                     <!-- <img th:if="${post.img != null}" th:src="'/res/images/'+${post.img}"/> -->
+
+                    <!-- <img th:if="${post.img != null}" th:src="'/res/images/'+${post.img}"/> -->
+
                     <p th:text="${post.text}"></p>
                 </div>
             </div>
@@ -52,7 +60,11 @@
                             <a name="item-121212121212"></a>
                             <div class="detail-about detail-about-reply">
                                 <a class="jie-user" th:href="'/user/detail/'+${comment.user.id}"> 
+
                                     <!-- <img th:src="'/res/images/avatar/'+${comment.user.img}" alt=""> <cite>  -->
+
+                                    <!-- <img th:src="'/res/images/avatar/'+${comment.user.img}" alt=""> <cite>  -->
+
                                     <i th:text="${comment.user.nickname}"></i></cite> 
                                 </a>
                                 <div class="detail-hits">

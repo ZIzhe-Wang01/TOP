@@ -9,6 +9,15 @@ mybatis-plus:
   type-aliases-package: com.top.pojo
   configuration:
     #自动驼峰命名
+
+#Mybatis-plus
+mybatis-plus:
+  #Mapper file
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  
+  type-aliases-package: com.top.pojo
+  configuration:
+
     map-underscore-to-camel-case: false
   global-config:
     db-config:
@@ -21,7 +30,12 @@ spring:
     username: root
     password: 123456
   thymeleaf:
+
+
     #不启用缓存
+
+    #不启用缓存
+
     cache: false
   mvc:
     view:

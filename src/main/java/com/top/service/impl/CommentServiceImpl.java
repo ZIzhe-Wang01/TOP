@@ -2,25 +2,18 @@ package com.top.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a0f95bad5e82b48112f84d31c3fbcae296fc8039
+
 import com.top.mapper.CommentMapper;
 import com.top.mapper.UserMapper;
 import com.top.pojo.Comment;
 import com.top.service.CommentService;
 import com.top.utlis.PageResult;
-<<<<<<< HEAD
-=======
+
 import com.top.dao.entity.Comment;
 import com.top.dao.mapper.CommentMapper;
 import com.top.dao.mapper.UserMapper;
 import com.top.service.CommentService;
 import com.top.utils.PageResult;
->>>>>>> 7c4da5c (new update)
-=======
->>>>>>> a0f95bad5e82b48112f84d31c3fbcae296fc8039
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
